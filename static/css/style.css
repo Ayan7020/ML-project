@@ -1,0 +1,133 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a blur effect to the background behind the login div */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-image.jpg'); /* Set your background image */
+    filter: blur(5px); /* Adjust the blur value as needed */
+    z-index: -1;
+}
+
+/* Center the login div horizontally and vertically */
+body {
+    background-color: #333; /* Dark background color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Set the height to the viewport height for vertical centering */
+    margin: 0;
+    padding: 0;
+    color: #000000; /* Set text color to white for contrast */
+}
+
+
+/* Style the select element with a border-radius to make it curved */
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent url('arrow.png') no-repeat right center;
+    padding-right: 30px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    border-radius: 15px; /* Adjust this value to control the level of curvature */
+}
+
+
+/* Style the login div with animation */
+.login {
+    background-color: rgba(255, 255, 255, 0.9); /* Set the background color with transparency */
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease; /* Define the animation properties */
+}
+ 
+
+ /* Define the fadeIn animation */
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    }
+
+
+
+/* Style the form title */
+.login h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style form labels and inputs */
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smoother hover animation with cubic-bezier */
+}
+
+/* Additional styles for when the button is hovered over */
+.btn:hover {
+    background-color: #45a049; /* Change to your desired hover color */
+    transform: scale(1.05); /* Slightly scale up on hover for smooth effect */
+}
+
+/* Add some spacing to the result */
+h2 {
+    margin-top: 20px;
+}
+
+/* Style the select element with a border-radius to make it curved */
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent url('arrow.png') no-repeat right center;
+    padding-right: 30px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    border-radius: 15px; /* Adjust this value to control the level of curvature */
+}
+
+
+/* Add more styling as needed */
+@media (max-width: 768px) {
+    /* Add responsive styles for screens up to 768px wide (typical for tablets and mobile devices) */
+    .login {
+        width: 90%; /* Adjust to fit the screen */
+    }
+}
